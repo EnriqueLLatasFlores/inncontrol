@@ -16,7 +16,7 @@ RUN mvn dependency:go-offline
 COPY src ./src
 
 # Compila la aplicación con Maven
-RUN mvn clean install -DskipTests
+RUN mvn clean install -DskipTests -X
 
 # Usa una imagen más ligera de OpenJDK para ejecutar
 FROM openjdk:17-jdk-slim
